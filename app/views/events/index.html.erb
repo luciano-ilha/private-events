@@ -1,0 +1,7 @@
+<h1>All Events from Event controller</h1>
+
+<% @events.each do |event| %>
+    <ul>  
+       <li> <%= link_to event.event_date , event_path(event.id) %> </li>
+    </ul>
+<% end %>
