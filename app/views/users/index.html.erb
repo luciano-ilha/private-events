@@ -1,2 +1,8 @@
 <h1>Index</h1>
- 
+<div>
+    <% @users.each do |user|%>
+        <ul>
+            <li> <%= link_to user.name , user_path(user.id) %> </li>
+        </ul>
+    <% end %>
+</div>
