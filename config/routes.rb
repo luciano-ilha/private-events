@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   resources :sessions
   root 'users#index'
 
-  get '/login' => 'sessions#new'
-  post '/login' => 'sessions#create'
+   get '/login' => 'sessions#new'
+   post '/login' => 'sessions#create'
 end
