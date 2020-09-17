@@ -1,5 +1,5 @@
 <h1>Login</h1>
-<%= form_for(:session, method: 'get', local: true)  do |f| %>
+<%= form_for(:session, url: login_path, method: 'post')  do |f| %>
     <p>
         <%= f.label :name, 'Name'%>
         <%= f.text_field :name %>

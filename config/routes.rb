@@ -3,4 +3,7 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create, :show]
   resources :sessions
   root 'users#index'
+
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
 end
