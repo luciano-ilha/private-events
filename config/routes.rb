@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :users, only: [:new, :create, :show]
   resources :sessions
+  resources :events, except: [:edit,:destroy]
   root 'users#index'
 
    get '/login' => 'sessions#new'
