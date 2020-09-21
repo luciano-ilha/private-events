@@ -1,4 +1,5 @@
 <h1>Show All Date Event</h2>
  <ul>
-    <li> <%= @event.creator.name%> </li>
+    <li> <%= @event.creator.name %> </li>
  <ul>
+  <%= button_to 'Register Now', attend_path(@event.id) %>
