@@ -2,4 +2,5 @@
  <ul>
     <li> <%= @event.creator.name %> </li>
  <ul>
-  <%= button_to 'Register Now', attend_path(@event.id) %>
+  <%= button_to 'Register Now', register_event_path(@event.id) %>
+  
