@@ -1,6 +1,7 @@
 <h1>Show All Date Event</h2>
- <ul>
-    <li> <%= @event.creator.name %> </li>
- <ul>
-  <%= button_to 'Register Now', register_event_path(@event.id) %>
+   <p> <% @event.attendees.each do |attendee| %> </p>
+         <p><%= attendee.name %></p>
+      <% end %>
+   
+   <%= button_to 'Register Now', register_event_path(@event.id) %>
   
