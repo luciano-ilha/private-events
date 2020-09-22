@@ -2,7 +2,8 @@
 
 <% @events.each do |event| %>
     <ul>  
-       <li> <%= link_to event.event_date , event_path(event.id) %> </li>
+        <li>Creator: <%= event.creator.name %> </li>
+       <li> Event Date: <%= link_to event.event_date , event_path(event.id) %> </li>
     </ul>
    
 <% end %>
