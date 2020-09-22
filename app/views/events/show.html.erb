@@ -1,7 +1,11 @@
 <h1>Show All Date Event</h2>
-   <p> <% @event.attendees.each do |attendee| %> </p>
-         <p><%= attendee.name %></p>
+   <div>
+      <% @event.attendees.each do |attendee|%>
+         <ul>
+            <li> <%= attendee.name  %> </li>
+         </ul>
       <% end %>
+   </div>
    
    <%= button_to 'Register Now', register_event_path(@event.id) %>
   
