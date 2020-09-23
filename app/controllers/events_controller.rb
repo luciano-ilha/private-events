@@ -25,7 +25,7 @@ class EventsController < ApplicationController
     end
 
     def register
-        @ea = EventAttendance.new(attended_event_id: params[:id], event_attendee_id: session[:user_id])
+        @ea = EventAttendance.new(attended_event_id: params[:id], attendee_id: session[:user_id])
         if @ea.save
         flash[:notice] = 'Register sucessfully'
         redirect_to events_path
