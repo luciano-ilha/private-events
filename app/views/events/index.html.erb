@@ -1,6 +1,16 @@
-<h1>All Events from Event controller</h1>
+<h1>All Upcoming Events</h1>
 
-<% @events.each do |event| %>
+<% @events.upcoming.each do |event| %>
+    <ul>  
+        <li>Creator: <%= event.creator.name %> </li>
+       <li> Event Date: <%= link_to event.event_date , event_path(event.id) %> </li>
+    </ul>
+   
+<% end %>
+
+
+<h1>All Past Events</h1>
+<% @events.past.each do |event| %>
     <ul>  
         <li>Creator: <%= event.creator.name %> </li>
        <li> Event Date: <%= link_to event.event_date , event_path(event.id) %> </li>
