@@ -10,6 +10,15 @@
   </head>
 
   <body>
+
+<% if session[:user_id].present? %>
+  <%= link_to "All Event", events_path  %>
+  <%= loggedInUser %>
+ <% else%>
+    <%= link_to "Log In", login_path  %>     
+    <%= link_to "Register", new_user_path  %>
+<%end%>
+
   <% flash.each do |name , message|%>
   <div>
     <%= message %>
