@@ -1,0 +1,9 @@
+<% @events.past.each do |event| %>
+    <ul>  
+        <li>Creator: <%= event.creator.name %> </li>
+        <li> Title: <%= event.title %> </li>
+        <li> Location: <%= event.location %> </li>
+        <li> Event Date: <%=  event.event_date  %> </li>
+        <li> Event Date: <%= link_to  "See all Attendee", event_path(event.id) %> </li>
+    </ul>
+<% end %>
