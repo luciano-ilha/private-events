@@ -5,7 +5,4 @@ class User < ApplicationRecord
   has_many :attended_events, through: :event_attendances
 
   validates :name, presence: true
-
-  scope :upcoming, -> { where('event_date > ?', Time.now) }
-  scope :past, -> { where('event_date < ?', Time.now) }
 end
