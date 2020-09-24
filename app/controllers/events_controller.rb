@@ -27,8 +27,8 @@ class EventsController < ApplicationController
     if @ea.save
       flash[:notice] = 'Register sucessfully'
       redirect_to events_path
-      else
-        flash[:alert] = 'Register not sucessfull'
+    else
+      flash[:alert] = 'Register not sucessfull'
     end
   end
 end
