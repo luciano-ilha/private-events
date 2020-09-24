@@ -14,7 +14,7 @@
 
 <% if session[:user_id].present? %>
   <%= link_to "All Event", events_path  %>
-  <%= loggedInUser %>
+  <%= logged_in_user %>
   <%= link_to "New Event", new_event_path  %>
  <% else%>
     <%= link_to "Log In", login_path  %>     
