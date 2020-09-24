@@ -1,8 +1,7 @@
-<h1> <%= loggedInUser %> </h1>
 <div>
     <% @users.each do |user|%>
         <ul>
-            <li> <%= link_to user.name , user_path(user.id) %> </li>
+            <li>(<%= user.events.count%>) Created by: <%= link_to user.name , user_path(user.id) %> </li>
         </ul>
     <% end %>
 </div>

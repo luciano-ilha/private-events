@@ -2,7 +2,13 @@
 
     <% @user.attended_events.each do |event| %> 
     <ul>
-        <li><%= event.description %></li>
+       <li>Creator: <%= event.creator.name %> <br/>
+            <p>Title: <%= event.title %></p> 
+            <p>Date: <%= event.event_date %></p> 
+            <p>Location: <%= event.location %></p>
+            <p>Description: <%= event.description %></p> 
+       </li> 
+        
     </ul>
 
     <% end %>
