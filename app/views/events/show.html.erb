@@ -1,0 +1,9 @@
+<h1>Event Attendee</h2>
+   <div>
+      <% @event.attendees.each do |attendee|%>
+         <ul>
+            <li> <%= attendee.name  %> </li>
+         </ul>
+      <% end %>
+   </div>
+ <%= button_to 'Register Now', register_event_path(@event.id) %>

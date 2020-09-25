@@ -1,0 +1,26 @@
+<h1>All Past Events</h1>
+
+<h1>Create Events</h1>
+    <% @user.events.past.each do |e| %>
+        <ul>
+        <li>Creator: <%= e.creator.name %> <br/>
+                <p>Title: <%= e.title %></p> 
+                <p>Date: <%= e.event_date %></p> 
+                <p>Location: <%= e.location %></p>
+                <p>Description: <%= e.description %></p> 
+        </li><br/><br/>      
+        </ul>
+    <% end %>
+
+<h1>All Attended Event </h1>
+    <% @user.attended_events.past.each do |event| %>
+        <ul>
+        <li>Creator: <%= event.creator.name %> <br/>
+                <p>Title: <%= event.title %></p> 
+                <p>Date: <%= event.event_date %></p> 
+                <p>Location: <%= event.location %></p>
+                <p>Description: <%= event.description %></p> 
+        </li><br/><br/>
+            
+        </ul>
+    <% end %>
